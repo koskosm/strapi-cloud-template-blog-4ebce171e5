@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tests",
+  "info": {
+    "singularName": "test",
+    "pluralName": "tests",
+    "displayName": "Posts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "Banner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sticky": {
+      "type": "boolean"
+    },
+    "Visible": {
+      "type": "boolean"
+    },
+    "Content_rich": {
+      "type": "blocks"
+    },
+    "Contents": {
+      "type": "text"
+    },
+    "user_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-type.user-type",
+      "mappedBy": "post"
+    },
+    "Push_schedule": {
+      "type": "datetime"
+    },
+    "uid": {
+      "type": "uid"
+    },
+    "External_link": {
+      "type": "string"
+    },
+    "notice_template": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::notice-template.notice-template"
+    },
+    "user_template": {
+      "type": "boolean"
+    }
+  }
+}

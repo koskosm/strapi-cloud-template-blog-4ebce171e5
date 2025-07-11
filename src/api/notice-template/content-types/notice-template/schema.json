@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notice_templates",
+  "info": {
+    "singularName": "notice-template",
+    "pluralName": "notice-templates",
+    "displayName": "notice template"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "template_title": {
+      "type": "string"
+    },
+    "template_content": {
+      "type": "text"
+    }
+  }
+}
